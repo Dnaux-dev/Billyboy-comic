@@ -42,8 +42,21 @@ img{
   margin: 10px auto 2px 2px;
 }
 
-.bx{
+.bx,
+.fa{
   cursor: pointer;
+}
+
+.fa-bell{
+  margin-left: 15px;
+  color: var(--text-color);
+}
+
+.fa-bell:hover,
+.fa-search:hover{
+  color: var(--hover-color);
+  transition: 0.25s all linear;
+  transform: scale(1.1);
 }
 
 body{
@@ -79,8 +92,9 @@ header{
   height: 100px;
   display: flex;
   align-items: center;
-  column-gap: 2.7rem;
+  column-gap: 0.7rem;
   margin-top: 0.5rem;
+  font-size: 14px;
 }
 
 
@@ -170,15 +184,21 @@ header{
   margin-left: 1rem;
 }
 
-.nav-link:hover,
-.nav-active{
+.nav-link:hover{
   color: var(--hover-color);
   transition: 0.25s all linear;
   transform: scale(1.1);
 
 }
 
-.nav-link .bx{
+.nav-link::after{
+  content: "";
+  color: var(--hover-color);
+  transition: 0.25s all linear ;
+  transform: scale(1.1);
+}
+
+.nav-link .fa{
   font-size: 1.6rem;
 }
 
@@ -552,23 +572,44 @@ margin-top: 10px;
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  
+
 }
 
 .heading_4 > .heading-title_4{
   font-weight: 700;
-  font-size: 43px;
-  width:280px;
+  font-size: 30px;
 }
-
- .fire{
+.fire{
   height: 30.998966276707165px;
   width: 25.559999465942386px;
-  /* margin-left: 340px; */
+  margin-left: 10px ;
   border-radius: 0px;
 }
 
- h6{
+.details{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.subscribe{
+  /* margin-left: 800px; */
+  color: var(--main-color);
+  width: 349px;
+  height: 20px;
+  padding-left:240px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.sub-link{
+  margin-left: 000px;
+}
+
+
+.id{
   width: 349px;
   height: 20px;
   margin-left: 5px;
@@ -723,4 +764,27 @@ overflow: hidden;
   margin-left: 2.69px;
   margin-right: 5px;
 }
+
+/* Responsive */
+@media (max-width:1170px){
+  .navbar-icons{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 1500px;
+    transform: translateY(0);
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 100px;
+    padding: 10px;
+    border-top: 1px solid hsl(200 100% 99% / 55%);
+    background: linear-gradient(8deg, hsl(240 17% 14% / 100%) 5%, hsl(240 17% 14% / 90%) 100%);
+    font-size: 20px;
+    width: 100%;
+  }
+
+    /* .nav-link-title{
+      font-size: 19px;
+    } */
+  }
 
